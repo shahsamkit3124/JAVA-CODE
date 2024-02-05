@@ -1,0 +1,25 @@
+class Q91
+{
+    public static void main(String args[])
+    {
+        try{
+            int x=10/0;
+        }
+        /*catch(IOException e)
+        {
+            System.out.println(e);
+        }*/
+        catch(NumberFormatException e)
+        {
+            System.out.println(e);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println(e);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}

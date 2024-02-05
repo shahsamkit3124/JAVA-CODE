@@ -1,0 +1,19 @@
+class outer
+{
+    static class inner
+    {
+        public static void test()
+        {
+            System.out.println("Inner function called");
+        }
+    }
+}
+
+class Q66
+{
+    public static void main(String args[])
+    {
+        outer.inner n1 = new outer.inner();
+        n1.test();
+    }
+}

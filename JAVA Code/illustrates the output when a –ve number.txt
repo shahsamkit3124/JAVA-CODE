@@ -1,0 +1,13 @@
+class Q92
+{
+    public static void main(String args[])
+    {
+        try{
+            System.out.println(Math.sqrt(-1));
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}

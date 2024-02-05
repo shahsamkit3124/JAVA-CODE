@@ -1,0 +1,26 @@
+class Q38
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String str1 = sc.nextLine();
+        int u=0,l=0,b=0,d=0;
+        for(int i=0;i<str1.length();i++)
+        {
+            char ch = str1.charAt(i);
+            if(ch >= 'A' && ch <= 'Z')
+                u++;
+            else if(ch >= 'a' && ch <= 'z')
+                l++;
+            else if(ch == ' ')
+                b++;
+            else if(ch >= 0 && ch <= 9)
+                d++;
+        }
+        System.out.println("Upper Case " + u);
+        System.out.println("Lower Case " + l);
+        System.out.println("Digits " + d);
+        System.out.println("Blanks " + b);
+    }
+}

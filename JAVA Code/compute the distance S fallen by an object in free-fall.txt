@@ -1,0 +1,17 @@
+class Q25
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter So, Vo and a");
+        int so=sc.nextInt();
+        int vo=sc.nextInt();
+        int a=sc.nextInt();
+        Double S;
+        for(int i=0;i<=100;i+=5)
+        {
+            S=so+(vo*i)+(0.5*a*i*i);
+            System.out.println("S = " + S + " for t = " + i);
+        }
+    }
+}

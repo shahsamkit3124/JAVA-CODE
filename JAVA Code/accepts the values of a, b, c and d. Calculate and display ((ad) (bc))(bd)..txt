@@ -1,0 +1,26 @@
+class ZeroError extends Exception
+{
+    ZeroError(String s)
+    {
+        super(s);
+    }
+}
+
+class Q90
+{
+    public static void check(int x) throws ZeroError
+    {
+        if(x==0)
+            throw new ZeroError("B*D is 0");
+    }
+    public static void main(String args[])
+    {
+        try{
+            check(0);
+        }
+        catch(ZeroError e)
+        {
+            System.out.println(e);
+        }
+    }
+}

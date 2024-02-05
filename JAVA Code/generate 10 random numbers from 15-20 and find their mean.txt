@@ -1,0 +1,16 @@
+
+class Q4
+{
+    public static void main(String a[])
+    {
+        int p1=0,mean=0;
+        Random r=new Random();
+        for(int i=0;i<10;i++)
+        {
+            p1=r.nextInt(21-15)+15;
+            mean+=p1;
+        }
+        mean=mean/10;
+        System.out.println("Avg is "+mean);
+    }
+}

@@ -1,0 +1,114 @@
+class Q61
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1. Factorial\n2. Reverse\n3. Armstrong\n4. Palindrome\n5. Prime\n6. Fibonacci\n");
+        int ch=sc.nextInt();
+        switch(ch)
+        {
+            case 1:
+            factorial();
+            break;
+            case 2:
+            reverse();
+            break;
+            case 3:
+            testArmstrong();
+            break;
+            case 4:
+            testPalindrome();
+            break;
+            case 5:
+            testPrime();
+            break;
+            case 6:
+            fibonacciSeries();
+            break;
+            default:
+            System.out.println("Invalud choice");
+            break;
+        }
+    }
+
+    public static void factorial()
+    {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt(), fact=1;
+        for(int i=1;i<=x;i++)
+            fact*=i;
+        System.out.println(fact);
+    }
+
+    public static void reverse()
+    {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt(), rem=0, rev=0;
+        while(x>0)
+        {
+            rem = x%10;
+            rev = rev*10 + rem;
+            x = x/10;
+        }
+        System.out.println(rev);
+    }
+
+    public static void testArmstrong()
+    {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt(), rem=0, sum=0;
+        int t=x;
+        while(x>0)
+        {
+            rem = x%10;
+            sum += rem*rem*rem;
+            x = x/10;
+        }
+        System.out.println(sum==t?"Armstong":"Not");
+    }
+
+    public static void testPalindrome()
+    {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt(), rem=0, rev=0;
+        int t=x;
+        while(x>0)
+        {
+            rem = x%10;
+            rev = rev*10 + rem;
+            x = x/10;
+        }
+        System.out.println(rev==t?"Palin":"Not");
+    }
+
+    public static void testPrime()
+    {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt(), flag=1;
+        for(int i=2;i<x/2;i++)
+        {
+            if(x%i==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        System.out.println(flag==1?"Prime":"Not");
+    }
+
+    public static void fibonacciSeries()
+    {
+        int a=0,b=1,c=1;
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        System.out.println(a);
+        System.out.println(b);
+        for(int i=0;i<x;i++)
+        {
+            System.out.println(c);
+            c=a+b;
+            a=b;
+            b=c;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class Q48 {
+    public static void main(String[] args) {
+        int n, i,choice;
+        String name;
+        Scanner sc = new Scanner(System.in);
+        Vector<String> v = new Vector<String>();
+
+        do{
+            System.out.println("1.Insert\n2.Insert in between\n3.Delete\n4.Display\n5.Exit");
+            System.out.println("Enter choice");
+            choice=sc.nextInt();
+            switch(choice)
+            {
+                case 1:
+                System.out.println("enter a string to insert");
+                name = sc.next();
+                v.add(name);
+                break;
+                case 2:
+                System.out.println("enter a string to insert and enter the index");
+                int x=sc.nextInt();
+                name = sc.next();
+                v.insertElementAt(name,x);
+                break;
+                case 3:
+                System.out.println("enter a string to delete");
+                name = sc.next();
+                v.remove(name);
+                case 4:
+                System.out.println("Vector V:");
+                System.out.println(v);
+            }
+        }while(choice!=5);
+
+    }
+
+}
+

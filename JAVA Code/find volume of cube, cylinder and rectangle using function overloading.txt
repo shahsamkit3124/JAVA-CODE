@@ -1,0 +1,25 @@
+class Q59
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        vol(3);
+        vol(5,10);
+        vol(1,2,3);
+    }
+
+    public static void vol(int s)
+    {
+        System.out.println(s*s*s);
+    }
+
+    public static void vol(int l, int b, int h)
+    {
+        System.out.println(l*b*h);
+    }
+
+    public static void vol(int r, int h)
+    {
+        System.out.println(3.14*r*r*h);
+    }
+}

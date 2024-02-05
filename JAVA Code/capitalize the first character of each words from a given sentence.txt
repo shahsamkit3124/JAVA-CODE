@@ -1,0 +1,24 @@
+
+class Q39
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String str1 = sc.nextLine(), str2="";
+        str2+=(char)(str1.charAt(0)-32);
+        for(int i=1;i<str1.length();i++)
+        {
+            char ch = str1.charAt(i);
+            if(ch == ' ')
+            {
+                str2+=" ";
+                str2+=(char)(str1.charAt(i+1)-32);
+                i++;
+            }
+            else
+                str2+=ch;
+        }
+        System.out.println(str2);
+    }
+}

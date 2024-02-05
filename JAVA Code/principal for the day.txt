@@ -1,0 +1,51 @@
+import java.util.*;
+
+class Student {
+    String name;
+    int id;
+}
+
+class StudentLottery {
+    static Student addStudents(String name, int id)
+
+    {
+        Student s = new Student();
+        s.name = name;
+        s.id = id;
+        return s;
+    }
+
+    static int pickWinner(int n) {
+        Random rand = new Random();
+        int tmp = rand.nextInt(n + 1);
+        return tmp;
+    }
+
+    public static void main(String args[]) {
+        int n, id, win;
+        String name;
+
+        StudentLottery sl = new StudentLottery();
+
+        Scanner yd = new Scanner(System.in);
+
+        System.out.println("Enter the Number of Students:");
+        n = yd.nextInt();
+
+        Student s[] = new Student[n];
+
+        for (int i = 0; i < n; i++) {
+            s[i] = new Student();
+            System.out.println("Enter the Name: ");
+            name = yd.next();
+
+            System.out.println("Enter the ID: ");
+            id = yd.nextInt();
+            s[i] = sl.addStudents(name, id);
+        }
+
+        win = sl.pickWinner(n);
+
+        System.out.println("The Winner is " + s[win].id + " : " + s[win].name);
+    }
+}

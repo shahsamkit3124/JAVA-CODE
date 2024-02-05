@@ -1,0 +1,29 @@
+interface Shape
+{
+    void area();
+}
+
+class Sq implements Shape
+{
+    int l;
+    Sq(int l){this.l = l;}
+    public void area(){System.out.println(l*l);}
+}
+
+class Re implements Shape
+{
+    int l,b;
+    Re(int l, int b){this.l = l;this.b = b;}
+    public void area(){System.out.println(l*b);}
+}
+
+class Q77
+{
+    public static void main(String args[])
+    {
+        Shape s1 = new Sq(10);
+        Shape s2 = new Re(10,20);
+        s1.area();
+        s2.area();
+    }
+}

@@ -1,0 +1,21 @@
+class Q55
+{
+    static int sum=0;
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        dig(sc.nextInt());
+        System.out.println(sum);
+    }
+
+    public static int dig(int n)
+    {
+        int rem;
+        if(n<=0)
+            return 0;
+        rem = n%10;
+        sum+=rem;
+        return dig(n/10);
+    }
+}

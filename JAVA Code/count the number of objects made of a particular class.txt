@@ -1,0 +1,15 @@
+class Q64
+{
+    static int cnt=0;
+    Q64()
+    {
+        cnt++;
+    }
+    public static void main(String args[])
+    {
+        Q64 c1 = new Q64();
+        Q64 c2 = new Q64();
+        Q64 c3 = new Q64();
+        System.out.println(cnt);
+    }
+}

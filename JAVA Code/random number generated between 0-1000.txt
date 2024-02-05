@@ -1,0 +1,14 @@
+class Q3
+{
+    public static void main(String a[])
+    {
+        int p1=0,p2=0;
+        Random r=new Random();
+        for(int i=0;i<5;i++)
+        {
+            p1+=r.nextInt(1001);
+            p2+=r.nextInt(1001);
+        }
+        System.out.println(p1>p2?"P1 wins":"P2 wins");
+    }
+}

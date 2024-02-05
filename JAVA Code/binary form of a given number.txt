@@ -1,0 +1,17 @@
+class Q33
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int x = sc.nextInt();
+        String bin="";
+        while(x>0)
+        {
+            bin+=x%2;
+            x=x/2;
+        }
+        for(int i=bin.length()-1;i>=0;i--)
+            System.out.print(bin.charAt(i));
+    }
+}

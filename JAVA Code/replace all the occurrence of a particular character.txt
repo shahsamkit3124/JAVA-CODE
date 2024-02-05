@@ -1,0 +1,15 @@
+class Q45
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String str1 = sc.nextLine();
+        System.out.println("Enter the char to replace");
+        String a = sc.next();
+        System.out.println("Enter the char to replace with");
+        String b = sc.next();
+        str1=str1.replaceAll(a, b);
+        System.out.println(str1);
+    }
+}

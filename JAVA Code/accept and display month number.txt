@@ -1,0 +1,14 @@
+class Q87
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        try {
+            int number = Integer.parseInt(sc.next());
+            System.out.println("You entered " + number);
+        }
+        catch (NumberFormatException e) {    
+            System.out.println("NumberFormatException occurred");
+        }
+    }
+}

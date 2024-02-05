@@ -1,0 +1,31 @@
+class CKECKARGUMENT extends Exception
+{
+    CKECKARGUMENT(String s)
+    {
+        super(s);
+    }
+}
+
+class Q93
+{
+    public static void checkNum(int x) throws CKECKARGUMENT
+    {
+        if(x<=5)
+            throw new CKECKARGUMENT("Less than 5 args");
+    }
+
+    public static void main(String args[])
+    {
+        int ch=0, cnt=0, sum=0;
+        Scanner sc = new Scanner(System.in);
+        while(ch!=-1)
+        {
+            ch=sc.nextInt();
+            cnt++;
+            sum+=ch;
+        }
+        sum+=1;
+        try{checkNum(cnt);System.out.println(sum);}
+        catch(CKECKARGUMENT e){System.out.println(e);}
+    }
+}

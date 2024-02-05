@@ -1,0 +1,71 @@
+class Q62
+{
+    static String name, addr;
+    static int acc_no, initial_bal, rate, phone;
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("1. Create");
+        System.out.println("2. Deposit");
+        System.out.println("3. Withdraw");
+        System.out.println("4. Interest");
+        System.out.println("5. Balance");
+        int ch = sc.nextInt();
+        switch (ch)
+        {
+            case 1:
+            createAccount();
+            break;
+            case 2:
+            deposit();
+            break;
+            case 3:
+            withdraw();
+            break;
+            case 4:
+            computeInterest();
+            break;
+            case 5:
+            displayBalance();
+            break;
+            default:
+            System.out.println("Invlaid choice");
+            break;
+        }
+    }
+    public static void createAccount()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the name, acc_no, balance, rate, phone no and address");
+        name = sc.nextLine();
+        acc_no = sc.nextInt();
+        initial_bal = sc.nextInt();
+        rate = sc.nextInt();
+        phone = sc.nextInt();
+        addr = sc.nextLine();
+    }
+
+    public static void deposit()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the sum");
+        initial_bal += sc.nextInt();
+    }
+    public static void withdraw()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the sum");
+        initial_bal -= sc.nextInt();
+    }
+    public static void computeInterest()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the time");
+        int i = (initial_bal * rate * sc.nextInt());
+        System.out.println(initial_bal);
+    }
+    public static void displayBalance()
+    {
+        System.out.println(initial_bal);
+    }
+}

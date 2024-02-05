@@ -1,0 +1,22 @@
+import java.util.*;
+class Q15{
+    static int GCD(int n1,int n2)
+    {
+        if(n1==0) return n2;
+        return GCD(n2%n1,n1);
+    }
+    public static void main(String[] args) {
+        int n1,n2,gcd,lcm;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter 2 numbers");
+        n1=sc.nextInt();
+        n2=sc.nextInt();
+        gcd=GCD(n1,n2);
+        if(gcd==1)
+        System.out.println("Gcd doesnt exist");
+        else
+        System.out.println("GCD = "+gcd);
+        lcm=n1*n2/gcd;
+        System.out.println("LCM = "+lcm);
+    }
+}

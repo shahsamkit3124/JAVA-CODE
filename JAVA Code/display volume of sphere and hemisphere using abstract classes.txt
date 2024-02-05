@@ -1,0 +1,40 @@
+abstract class CirShape{
+    abstract void volume();
+}
+
+class Sphere extends CirShape
+{
+    int r;
+    Sphere(int r)
+    {
+        this.r=r;
+    }
+    void volume()
+    {
+        System.out.println(4.0/3.0*3.14*r*r*r);
+    }
+}
+
+class Hemisphere extends CirShape
+{
+    int r;
+    Hemisphere(int r)
+    {
+        this.r=r;
+    }
+    void volume()
+    {
+        System.out.println(2.0/3.0*3.14*r*r*r);
+    }
+}
+
+class Q81
+{
+    public static void main(String args[])
+    {
+        CirShape s1 = new Sphere(10);
+        CirShape s2 = new Hemisphere(10);
+        s1.volume();
+        s2.volume();
+    }   
+}

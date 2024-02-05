@@ -1,0 +1,21 @@
+class Q60
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nCr and nPr");
+        int n = sc.nextInt();
+        int r = sc.nextInt();
+        Double ncr = fact(n)/(fact(n-r)*fact(r));
+        Double npr = fact(n)/fact(r);
+        System.out.println("nCr is " + ncr);
+        System.out.println("nPr is " + npr);
+    }
+
+    public static Double fact(int n)
+    {
+        if(n<=1)
+            return 1.0;
+        return n*fact(n-1);
+    }
+}

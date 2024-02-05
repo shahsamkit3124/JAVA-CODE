@@ -1,0 +1,43 @@
+class Q28
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a 4 digit number");
+        int n = sc.nextInt();
+        int x = n, rem=0, dig[] = new int[4], dig2[] = new int[12], v=0;
+        for(int i=0;i<4;i++)
+        {
+            rem = x%10;
+            dig[i] = rem;
+            x = x/10;
+        }
+        int k=0;
+        for(int i=0;i<4;i++)
+        {
+            for(int j=0;j<4;j++)
+            {
+                if(i==j)
+                    continue;
+                int y = dig[i]*10+dig[j];
+                if(y<10)
+                    continue;
+                dig2[k++]=y;
+            }
+        }
+        for(int i=0;i<dig2.length;i++)
+        {
+            for(int j=0;j<dig2.length;j++)
+            {
+                if(i==j)
+                    continue;
+                if(dig2[i]*dig2[j] == n)
+                {
+                    v=1;
+                    break;
+                }
+            }
+        }
+        System.out.println(v==1?"Vampire":"Not");
+    }
+}

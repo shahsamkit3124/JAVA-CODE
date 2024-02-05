@@ -1,0 +1,12 @@
+class Q34
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number and its position");
+        int x = sc.nextInt();
+        int p = sc.nextInt();
+        int arr[] = new int[100];
+        arr[p-1] = x;
+    }
+}

@@ -1,0 +1,28 @@
+class InvalidMarks extends Exception
+{
+    InvalidMarks(String errorMessage)
+    {
+        super(errorMessage);
+    }
+}
+
+class Q89
+{
+    static void check(int marks) throws InvalidMarks
+    {
+        if(marks>100)
+            throw new InvalidMarks("More than 100");
+    }
+    public static void main(String args[])
+    {
+        int marks = 101;
+        try{
+            check(marks);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+            
+    }
+}

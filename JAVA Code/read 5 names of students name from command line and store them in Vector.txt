@@ -1,0 +1,15 @@
+class Q49
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        Vector<String> vec = new Vector<String>();
+        Enumeration e;
+        for(int i=0;i<5;i++)
+            vec.add(sc.next());
+        Collections.sort(vec);
+        e=vec.elements();
+        while(e.hasMoreElements())
+            System.out.println(e.nextElement());
+    }
+}

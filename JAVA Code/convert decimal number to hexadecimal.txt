@@ -1,0 +1,25 @@
+class Q2
+{
+    public static void main(String a[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        double x = sc.nextDouble();
+        double rem=20, i=1;
+        String hex="";
+        while(x>15)
+        {
+            i=0;
+            rem=20;
+            while(rem>15)
+            {
+                i++;
+                rem = x/(Math.pow(16, i));
+            }
+            hex+=(int)rem+" ";
+            x=x-((int)rem*(Math.pow(16, i)));
+        }
+        hex+=(int)rem+" ";
+        System.out.println(hex);
+    }
+}
